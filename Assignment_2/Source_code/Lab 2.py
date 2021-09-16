@@ -1,7 +1,10 @@
 print('**** Welcome to the LAB grade calculator! ****')
 print()
+
 name = input('Who are we calculating grades for? ==> ')
 print()
+
+#if user input is > 100 or < 0
 labs = int(input('Enter the Labs grade? ==> '))
 if (labs > 100):
   labs = 100
@@ -26,6 +29,7 @@ if (attendance < 0):
   attendance = 0
   print('The attendance value should have been zero or greater. It has been changed to zero.')
 
+#weighted grade calculations
 weighted_labs = labs * 0.7
 weighted_exams = exams * 0.2
 weighted_attendance = attendance * 0.1
@@ -34,6 +38,7 @@ weighted_total = weighted_labs + weighted_exams + weighted_attendance
 print()
 print('The weighted grade for', name, 'is', weighted_total)
 
+#determine grades from user input
 if (90 <= weighted_total <= 100):
     print(name, 'has a letter grade of A')
 elif (80 <= weighted_total < 90):
